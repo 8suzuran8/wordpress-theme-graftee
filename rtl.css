@@ -1,0 +1,110 @@
+html {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+article p {
+	text-align: right;
+}
+
+@media screen {
+	body > header {
+		text-align: right;
+	}
+
+	body > main {
+		text-align: right;
+	}
+
+	body > main article h1,
+	body > main article h2,
+	body > main article h3,
+	body > main article h4,
+	body > main article h5,
+	body > main article h6 {
+		border-left: none;
+		border-right: solid .5em #000;
+	}
+
+	body > main > article footer {
+		text-align: right;
+	}
+
+	body > main > article article header p {
+		text-align: left;
+	}
+
+	#comments article footer + * + * {
+		text-align: left;
+	}
+
+	#wp-calendar tfoot td:first-child {
+		text-align: right;
+	}
+
+	#wp-calendar tfoot td:last-child {
+		text-align: left;
+	}
+
+	body > aside ul {
+		text-align: right;
+	}
+
+	.widget_search {
+		text-align: right;
+	}
+
+	body > footer p small:last-child {
+		text-align: left;
+	}
+
+	body > footer > a {
+		left: 0;
+		right: auto;
+	}
+
+	body > footer > nav ul {
+		text-align: right;
+	}
+}
+
+@media screen and (max-width: 899px) {
+	body > nav {
+		text-align: left;
+	}
+
+	body > nav h2 {
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	body > main > article + ul li:first-child {
+		text-align: right;
+	}
+
+	body > main > article + ul li:last-child:not(:first-child) {
+		text-align: left;
+	}
+
+	body > main > article footer time {
+		text-align: left;
+	}
+
+	body > nav > div > ul > li:first-child > a {
+		border-left: none;
+		border-right: solid 1px #888;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: .5em;
+		border-bottom-right-radius: .5em;
+	}
+
+	body > nav > div > ul > li:last-child > a {
+		border-left: solid 1px #888;
+		border-top-left-radius: .5em;
+		border-bottom-left-radius: .5em;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}

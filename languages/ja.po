@@ -1,0 +1,325 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distrubuted under the GPL-2.0+
+msgid ""
+msgstr ""
+"Project-Id-Version: graftee\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2016-05-27 15:16+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: suzuran <8suzuran8@gmail.com>\n"
+"Language-Team: suzuran <8suzuran8@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions.php:59
+msgid "メインメニュー"
+msgstr "メニュー"
+
+#: functions.php:60
+msgid "フッターメニュー"
+msgstr "フッターメニュー"
+
+#: functions.php:61
+msgid "トップページメニュー"
+msgstr "トップページメニュー"
+
+#: functions.php:100
+msgid "サイドバー"
+msgstr "サイドバー"
+
+#: functions.php:110
+msgid "フッターバー"
+msgstr "フッターバー"
+
+#: functions.php:137
+msgid "記事の一覧"
+msgstr "記事の一覧"
+
+#: functions.php:140
+#, php-format
+msgid "%d件のコメント"
+msgstr ""
+"%d\n"
+"件のコメント"
+
+#: functions.php:143
+msgid "過去のコメント"
+msgstr "過去のコメント"
+
+#: functions.php:146
+msgid "最新コメント"
+msgstr "最新コメント"
+
+#: functions.php:149
+msgid "コメントは締め切られました"
+msgstr "コメントは締め切られました"
+
+#: functions.php:152
+msgid "コメント"
+msgstr "コメント"
+
+#: functions.php:155
+msgid "お名前"
+msgstr "お名前"
+
+#: functions.php:158
+msgid "メールアドレス"
+msgstr "メールアドレス"
+
+#: functions.php:161
+msgid "本文が見つかりません"
+msgstr "本文が見つかりません"
+
+#: functions.php:164
+msgid "記事の検索"
+msgstr "記事の検索"
+
+#: functions.php:167
+msgid "記事を読む"
+msgstr "記事を読む"
+
+#: functions.php:170
+msgid "<h2>カテゴリー</h2>"
+msgstr "<h2>カテゴリー</h2>"
+
+#: functions.php:173
+msgid "<h2>タグ</h2>"
+msgstr "<h2>タグ</h2>"
+
+#: functions.php:176
+msgid "上部へ"
+msgstr "上部へ"
+
+#: functions.php:179
+msgid "本文へ移動"
+msgstr "本文へ移動"
+
+#: functions.php:182
+msgid "メニュー"
+msgstr "メニュー"
+
+#: functions.php:185
+#, php-format
+msgid "検索結果：%s"
+msgstr "検索結果：%s"
+
+#: functions.php:188
+#, php-format
+msgid "%d件の投稿"
+msgstr "%d件の投稿"
+
+#: functions.php:191
+msgid "404 Not found"
+msgstr "404 Not found"
+
+#: functions.php:194
+msgid "この記事"
+msgstr "この記事"
+
+#: functions.php:197
+msgid "見つかりません"
+msgstr "見つかりません"
+
+#: functions.php:200
+#, php-format
+msgid "%dページ"
+msgstr "%dページ"
+
+#: functions.php:203
+msgid "小"
+msgstr "小"
+
+#: functions.php:206
+msgid "中"
+msgstr "中"
+
+#: functions.php:209
+msgid "大"
+msgstr "大"
+
+#: functions.php:212
+msgid "文字サイズ"
+msgstr "文字サイズ"
+
+#: functions.php:256
+msgid "サイトのタイトル画像URL"
+msgstr "サイトのタイトル画像URL"
+
+#: functions.php:274
+msgid "ヘッダー背景色"
+msgstr "ヘッダー背景色"
+
+#: functions.php:284
+msgid "全てのヘッダー画像を表示(5枚以上設定した場合のみ)"
+msgstr "全てのヘッダー画像を表示(5枚以上設定した場合のみ)"
+
+#: functions.php:296
+msgid "ヘッダー画像のアニメーション"
+msgstr "ヘッダー画像のアニメーション"
+
+#: functions.php:301
+msgid "右から左に流れる"
+msgstr "右から左に流れる"
+
+#: functions.php:302
+msgid "左から右に流れる"
+msgstr "左から右に流れる"
+
+#: functions.php:303
+msgid "上から下に流れる"
+msgstr "上から下に流れる"
+
+#: functions.php:304
+msgid "下から上に流れる"
+msgstr "下から上に流れる"
+
+#: functions.php:309
+#, php-format
+msgid "%s設定"
+msgstr "%s設定"
+
+#: functions.php:319
+msgid "パンくずリストを使用する"
+msgstr "パンくずリストを使用する"
+
+#: functions.php:331
+msgid "文字サイズボタンを表示する"
+msgstr "文字サイズボタンを表示する"
+
+#: functions.php:343
+msgid "タイトルの使用を無効にする"
+msgstr "タイトルの使用を無効にする"
+
+#: functions.php:355
+msgid "style.cssを無効にする"
+msgstr "style.cssを無効にする"
+
+#: functions.php:369
+msgid "CSSファイルを追加する"
+msgstr "CSSファイルを追加する"
+
+#: functions.php:383
+msgid "footerのクレジット表示"
+msgstr "footerのクレジット表示"
+
+#: functions.php:427
+msgid "を次の文字に変更"
+msgstr "を次の文字に変更"
+
+#: functions.php:899
+msgid "ニュース"
+msgstr "ニュース"
+
+#: functions.php:972
+msgid "イベント名"
+msgstr "イベント名"
+
+#: functions.php:975
+msgid "開始時間"
+msgstr "開始時間"
+
+#: functions.php:978
+msgid "終了時間"
+msgstr "終了時間"
+
+#: functions.php:981
+msgid "イベント情報"
+msgstr "イベント情報"
+
+#: functions.php:984
+msgid "書き出し後もエディタ側で編集可能です"
+msgstr "書き出し後もエディタ側で編集可能です"
+
+#: functions.php:987
+msgid "書き出し"
+msgstr "書き出し"
+
+#: functions.php:1053
+msgid "前へ"
+msgstr "前へ"
+
+#: functions.php:1054
+msgid "次へ"
+msgstr "次へ"
+
+#: functions.php:1126
+msgid ""
+"このコンテンツはパスワードで保護されています。閲覧するには以下にパスワードを"
+"入力してください。"
+msgstr ""
+"このコンテンツはパスワードで保護されています。閲覧するには以下にパスワードを"
+"入力してください。"
+
+#: functions.php:1233
+msgid "404 Not Found"
+msgstr "404 Not Found"
+
+#: functions.php:1243 functions.php:1252
+#, php-format
+msgid "%sに関する記事"
+msgstr "%sに関する記事"
+
+#: functions.php:1246 functions.php:1429 functions.php:1432
+msgid "Y年"
+msgstr "Y年"
+
+#: functions.php:1248
+msgid "Y年F"
+msgstr "Y年F"
+
+#: functions.php:1250
+msgid "Y年Fj日"
+msgstr "Y年Fj日"
+
+#: functions.php:1435 functions.php:1438
+msgid "F"
+msgstr "F"
+
+#: functions.php:1439
+msgid "j日"
+msgstr "j日"
+
+#: news-sample.php:7
+#, php-format
+msgid "%sを更に高速化するプラグイン"
+msgstr "%sを更に高速化するプラグイン"
+
+msgid ""
+"graftee is a simple WordPress theme for the blog. Use the Responsive layout "
+"of CSS media queries, and automatically respond to smartphones, and support "
+"accessibility AAA. graftee is a theme for child theme. graftee have many "
+"original hook method, and auto load child theme files. File is graftee.js, "
+"news.php, customizer.php and customizer.js in child theme directory. graftee "
+"is perfect markup, so if you can use the CSS, you can easily develop the "
+"theme. You can make a lot of design just make the style.css and images. You "
+"can use the starter CSS. It is a style-sample-left-nav.css and style-sample-"
+"right-nav.css and style-sample-top-nav.css. These are only the CSS different "
+"position of global menu. After that, you just change the color, size, "
+"background image, border. It is easy! graftee is a theme for develop child "
+"theme!"
+msgstr ""
+"grafteeはブログのためのシンプルなテーマです。CSSのmedia queryでのレスポンシブ"
+"レイアウトにより、スマートフォンに対応してます。また、アクセシビリティAAAにも"
+"対応しています。grafteeは子テーマの為のテーマです。子テーマを柔軟に作れるよう"
+"にするため、独自のフック関数を沢山用意しています。また、子テーマ内のファイル"
+"を自動で読み込む機能も作ってます。自動で読み込むファイルは、graftee.jsとnews."
+"phpとcustomizer.phpとcustomizer.jsです。grafteeは理想的なマークアップのため、"
+"もしあなたがCSSを扱えるなら、簡単にテーマを制作することができます。style.css"
+"と画像を作るだけで、多くのデザインが作れます。子テーマを制作するためのスター"
+"ターCSSも用意しています。そのファイルは、style-sample-left-nav.cssとstyle-"
+"sample-right-nav.cssとstyle-sample-top-nav.cssで、これらは、グローバルメ"
+"ニューの位置が異なるだけのCSSになってます。あとは、色だったり、サイズだった"
+"り、背景画像だったり、ボーダーだったりを変更するだけです。とても簡単です!"
+"grafteeは子テーマを制作するためのテーマです。"
