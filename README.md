@@ -1,4 +1,8 @@
 /* ------------------------------------
+Screenshot
+------------------------------------ */
+<img alt="画面のスクリーンショット" src="https://github.com/8suzuran8/wordpress-theme-graftee/blob/f4d539efa2174e9f0a06da4098e8d5ecfac49e84/screenshot.png">
+/* ------------------------------------
 License
 ------------------------------------ */
 
