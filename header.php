@@ -20,6 +20,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
 	<?php $graftee_advanced_settings_font_size = get_theme_mod( 'graftee_advanced_settings_font_size', null ); ?>
 	<?php if ( !is_null( $graftee_advanced_settings_font_size ) && $graftee_advanced_settings_font_size === true ): ?>
 		<input type="radio" name="change-font-size-button" value="05" id="change-font-size-button-05" hidden>
