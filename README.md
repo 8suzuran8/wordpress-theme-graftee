@@ -7,18 +7,18 @@ License
 ------------------------------------ */
 
 graftee WordPress Theme, Copyright 2014 suzuran
-graftee is distributed under the terms of the GNU GPL, Version 2 (or later)
+graftee is distributed under the terms of the GNU GPL, Version 3 (or later)
 
 This program is free software:
-You can redistribute it and/or modify it under the terms of GNU General Public License version 2 (or later).
+You can redistribute it and/or modify it under the terms of GNU General Public License version 3 (or later).
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
 Without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 See the GNU General Public License for more details.
 
-License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Unless otherwise specified, all the theme files, scripts and images are licensed under the terms of the GNU GPL, Version 2 (or later).
+Unless otherwise specified, all the theme files, scripts and images are licensed under the terms of the GNU GPL, Version 3 (or later).
 
 Scripts and Image was created by suzuran, Copyright 2014 suzuran
 All scripts in "/js" folder
