@@ -4,25 +4,45 @@ Theme URI: https://graftee.wordpress.com/
 Author: suzuran
 Author URI: https://profiles.wordpress.org/8suzuran8/
 Description: graftee is a simple WordPress theme for the blog. Use the Responsive layout of CSS media queries, and automatically respond to smartphones, and support accessibility AAA. graftee is a theme for child theme. graftee have many original hook method, and auto load child theme files. File is graftee.js, news.php, customizer.php and customizer.js in child theme directory. graftee is perfect markup, so if you can use the CSS, you can easily develop the theme. You can make a lot of design just make the style.css and images. You can use the starter CSS. It is a style-sample-left-nav.css and style-sample-right-nav.css and style-sample-top-nav.css. These are only the CSS different position of global menu. After that, you just change the color, size, background image, border. It is easy! graftee is a theme for develop child theme!
-Tested up to: 6.2                                                                                                                      
+Tested up to: 6.2
+Requires PHP: 7.2
 Version: 1.1.39
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.ja.html
 Text Domain: graftee
-Tags: black, gray, white, fluid-layout, responsive-layout, one-column, two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, blavatar, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
-*/
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+ */
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter {
+}
 
 /* all (print, PC, smartphone) */
 body > header > h1 {
-    font-size: 1em;
-    font-weight: normal;
-    text-align: center;
+	font-size: 1em;
+	font-weight: normal;
+	text-align: center;
 }
 
 body > header > p {
-    font-size: 2em;
-    font-weight: bold;
-    text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
 }
 
 body > main h1,
@@ -40,43 +60,43 @@ body > main h6 {
 
 /* print */
 @media print {
-    body > header > a,
-    body > header > section,
-    body > nav,
-    body > ol,
-    body > main > ul,
-    body > aside,
-    body > footer {
-        display: none;
-    }
+	body > header > a,
+	body > header > section,
+	body > nav,
+	body > ol,
+	body > main > ul,
+	body > aside,
+	body > footer {
+		display: none;
+	}
 }
 
 /* screen */
 @media screen {
-    body {
-        margin: 0;
-    }
+	body {
+		margin: 0;
+	}
 
-    body > header {
-        position: relative;
-        color: #fff;
-    }
+	body > header {
+		position: relative;
+		color: #fff;
+	}
 
-    body.use-header-image > header::before {
-        background-repeat: repeat;
-        background-size: cover;
-        content: "";
-        display: block;
-        height: 9em;
-        left: 1em;
-        position: absolute;
-        top: 2.5em;
-        width: calc(100% - 2em);
-    }
+	body.use-header-image > header::before {
+		background-repeat: repeat;
+		background-size: cover;
+		content: "";
+		display: block;
+		height: 9em;
+		left: 1em;
+		position: absolute;
+		top: 2.5em;
+		width: calc(100% - 2em);
+	}
 
 	body > header > section label {
-        border: solid 2px #646464;
-    }
+		border: solid 2px #646464;
+	}
 
 	body > input:nth-child(1):checked ~ header > section > ul > li:nth-child(1) label,
 	body > input:nth-child(2):checked ~ header > section > ul > li:nth-child(2) label,
@@ -85,126 +105,126 @@ body > main h6 {
 		cursor: default;
 	}
 
-    body > input:nth-child(1):checked ~ main > article {
-        font-size: 0.5em;
-    }
-    body > input:nth-child(2):checked ~ main > article {
-        font-size: 1em;
-    }
-    body > input:nth-child(3):checked ~ main > article {
-        font-size: 2em;
-    }
+	body > input:nth-child(1):checked ~ main > article {
+		font-size: 0.5em;
+	}
+	body > input:nth-child(2):checked ~ main > article {
+		font-size: 1em;
+	}
+	body > input:nth-child(3):checked ~ main > article {
+		font-size: 2em;
+	}
 
-    body > header > h1 {
-        background-color: #000;
-        color: #fff;
-        margin: 0;
-    }
+	body > header > h1 {
+		background-color: #000;
+		color: #fff;
+		margin: 0;
+	}
 
-    body > header > p {
-        background-color: #000;
-        border-radius: .5em;
-        line-height: 4.5em;
-        margin: 0;
-        margin-top: .5em;
-    }
+	body > header > p {
+		background-color: #000;
+		border-radius: .5em;
+		line-height: 4.5em;
+		margin: 0;
+		margin-top: .5em;
+	}
 
-    body > header > section {
-        background-color: rgba(255, 255, 255, .3);
-        border-radius: .5em;
-        color: #fff;
-        line-height: 2em;
-        height: 2em;
-        padding: .5em 0;
-        position: absolute;
-        right: 1em;
-        top: 2.5em;
-    }
+	body > header > section {
+		background-color: rgba(255, 255, 255, .3);
+		border-radius: .5em;
+		color: #fff;
+		line-height: 2em;
+		height: 2em;
+		padding: .5em 0;
+		position: absolute;
+		right: 1em;
+		top: 2.5em;
+	}
 
-    body > header > section > h2 {
-        display: inline;
-        font-size: 1em;
-        font-weight: normal;
-        margin: 0 1em 0 1em;
-        
-    }
+	body > header > section > h2 {
+		display: inline;
+		font-size: 1em;
+		font-weight: normal;
+		margin: 0 1em 0 1em;
+		
+	}
 
-    body > header > section > ul {
-        display: inline;
-        padding: 0;
-    }
+	body > header > section > ul {
+		display: inline;
+		padding: 0;
+	}
 
-    body > header > section > ul > li {
-        display: inline;
-    }
+	body > header > section > ul > li {
+		display: inline;
+	}
 
-    body > header > section > ul > li > label {
-        background-color: #646464;
-        border-radius: .5em;
-        margin-right: .5em;
-        padding: .5em;
-    }
+	body > header > section > ul > li > label {
+		background-color: #646464;
+		border-radius: .5em;
+		margin-right: .5em;
+		padding: .5em;
+	}
 
-    body > header > section > ul > li > label:hover {
+	body > header > section > ul > li > label:hover {
 		cursor: pointer;
-    }
+	}
 
-    body > header > a {
-        color: #fff;
-        position: absolute;
-        right: 1em;
-        top: 6em;
-    }
+	body > header > a {
+		color: #fff;
+		position: absolute;
+		right: 1em;
+		top: 6em;
+	}
 
-    body > header:first-child a {
-        /* use font size change */
-        top: 3em;
-    }
+	body > header:first-child a {
+		/* use font size change */
+		top: 3em;
+	}
 
-    body > nav {
-        background-color: #fff;
-        border: solid 1px #000;
-        border-radius: .5em;
-        display: inline-block;
-        line-height: 2.5em;
-    }
+	body > nav {
+		background-color: #fff;
+		border: solid 1px #000;
+		border-radius: .5em;
+		display: inline-block;
+		line-height: 2.5em;
+	}
 
-    body > nav > input {
-        display: none;
-    }
+	body > nav > input {
+		display: none;
+	}
 
-    body > nav ul {
+	body > nav ul {
 		list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+		margin: 0;
+		padding: 0;
+	}
 
-    body > ol {
-        background-color: #fff;
-        border: solid 1px #000;
-        border-radius: .5em;
-        list-style: none;
-        margin: 0;
-        margin-top: 1em;
-        padding: .5em;
-    }
+	body > ol {
+		background-color: #fff;
+		border: solid 1px #000;
+		border-radius: .5em;
+		list-style: none;
+		margin: 0;
+		margin-top: 1em;
+		padding: .5em;
+	}
 
-    body > ol > li {
-        display: inline;
-    }
+	body > ol > li {
+		display: inline;
+	}
 
-    body > ol > li:not(:last-child)::after {
-        content: ">";
-        margin-left: .5em;
-    }
+	body > ol > li:not(:last-child)::after {
+		content: ">";
+		margin-left: .5em;
+	}
 
-    body > main {
-        background-color: #fff;
-        border: solid 1px #000;
-        border-radius: .5em;
-        margin-top: 1em;
-        padding: 1em;
-    }
+	body > main {
+		background-color: #fff;
+		border: solid 1px #000;
+		border-radius: .5em;
+		margin-top: 1em;
+		padding: 1em;
+	}
 
 	iframe.foriframe {
 		border: none;
@@ -214,9 +234,9 @@ body > main h6 {
 		width: 100%;
 	}
 
-    body > main > article > nav {
-        display: none;
-    }
+	body > main > article > nav {
+		display: none;
+	}
 
 	body > main > article > article {
 		background: #e2e2e2;
@@ -248,139 +268,147 @@ body > main h6 {
 		min-height: 3em;
 	}
 
-    body > aside {
-        background-color: #fff;
-        border: solid 1px #000;
-        border-radius: .5em;
-    }
+	body > aside {
+		background-color: #fff;
+		border: solid 1px #000;
+		border-radius: .5em;
+	}
 
-    body > footer {
-        background-color: #000;
-        border-radius: .5em;
-        margin-top: 1em;
-        padding: .5em;
-        text-align: right;
-    }
+	body > footer {
+		background-color: #000;
+		border-radius: .5em;
+		margin-top: 1em;
+		padding: .5em;
+		text-align: right;
+	}
 
-    body > footer > nav ul {
-        list-style: none;
-        margin: 0;
-        margin-bottom: 1em;
-        padding: 0;
-    }
+	body > footer > nav ul {
+		list-style: none;
+		margin: 0;
+		margin-bottom: 1em;
+		padding: 0;
+	}
 
-    body > footer > nav a {
-        color: #fff;
-    }
+	body > footer > nav a {
+		color: #fff;
+	}
 
-    body > footer > nav,
-    body > footer > aside {
-        border-bottom: solid 1px #646464;
-        margin-bottom: 1em;
-        text-align: left;
-    }
+	body > footer > nav,
+	body > footer > aside {
+		border-bottom: solid 1px #646464;
+		margin-bottom: 1em;
+		text-align: left;
+	}
 
-    body > footer > p {
-        margin: 0;
-        margin-bottom: 1em;
-    }
+	body > footer > p {
+		margin: 0;
+		margin-bottom: 1em;
+	}
 
-    body > footer > p > small {
-        display: block;
-    }
+	body > footer > p > small {
+		display: block;
+	}
 
-    body > footer > p > small:first-child {
-        text-align: center;
-    }
+	body > footer > p > small:first-child {
+		text-align: center;
+	}
 
-    body > footer > p > small:last-child {
-        text-align: right;
-    }
+	body > footer > p > small:last-child {
+		text-align: right;
+	}
 
-    body > footer > a {
-        color: #fff;
-    }
+	body > footer > a {
+		color: #fff;
+	}
 }
 
 /* PC */
 @media screen and (min-width: 900px) {
-    body > header > p {
-        margin-left: .5em;
-        margin-right: .5em;
-    }
+	body > header > p {
+		margin-left: .5em;
+		margin-right: .5em;
+	}
 
-    body > nav {
-        margin-left: 1em;
-        margin-top: 1em;
-    }
+	body > nav {
+		margin-left: 1em;
+		margin-top: 1em;
+	}
 
-    body > nav > h2 {
-        display: none;
-    }
+	body > nav > h2 {
+		display: none;
+	}
 
-    body > nav li {
-        display: inline-block;
-        padding: 0 1em;
-    }
+	body > nav li {
+		display: inline-block;
+		padding: 0 1em;
+	}
 
-    body > nav li:not(:last-child) {
-        border-right: solid 1px #000;
-    }
+	body > nav li:not(:last-child) {
+		border-right: solid 1px #000;
+	}
 
-    body > ol {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+	body > ol {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
 
-    body > main {
-        margin-left: 1em;
-    }
+	body > main {
+		margin-left: 1em;
+	}
 
-    body.use-widget > main {
-        margin-right: 19em;
-    }
+	body.use-widget > main {
+		margin-right: 19em;
+	}
 
-    body > aside {
-        position: absolute;
-        right: 1em;
-        top: 16.1em;
-        width: 17em;
-    }
+	body > aside {
+		position: absolute;
+		right: 1em;
+		top: 16.1em;
+		width: 17em;
+	}
 
-    body > ol + main + aside {
-        /* use BreadcrumbList */
-        top: 19.75em;
-    }
+	body > ol + main + aside {
+		/* use BreadcrumbList */
+		top: 19.75em;
+	}
 
-    body > aside h2 {
-        background-color: #000;
-        color: #fff;
-    }
+	body > aside h2 {
+		background-color: #000;
+		color: #fff;
+	}
 
-    body > footer {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+	body > footer {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
 
-    body.use-widget > footer {
-        margin-right: 19em;
-    }
+	body.use-widget > footer {
+		margin-right: 19em;
+	}
 }
 
 /* smartphone */
 @media screen and (max-width: 899px) {
-    body > nav {
-        border: none;
-        height: 0;
-        position: absolute;
-        right: 1em;
-        top: 7em;
-    }
+	body > header > a {
+		top: 9em;
+	}
 
-    body > nav:nth-child(2) {
-        /* use font size change */
-        top: 4em;
-    }
+	body > header > section {
+		right: 0;
+	}
+
+	body > nav {
+		border: none;
+		height: 0;
+		position: absolute;
+		right: 1em;
+		top: 4em;
+	}
+
+	body > nav:nth-child(2) {
+		/* use font size change */
+		top: 4em;
+	}
 
 	body > nav h2 {
 		margin-bottom: 0;
@@ -392,7 +420,7 @@ body > main h6 {
 		color: #fff;
 		display: inline-block;
 		font-size: 10px;
-		height: 3.5em;
+		height: 5em;
 		margin-right: 0;
 		padding: 0;
 		text-align: center;
@@ -453,7 +481,7 @@ body > main h6 {
 		margin-bottom: .5em;
 	}
 
-    body > aside {
-        margin-top: 1em;
-    }
+	body > aside {
+		margin-top: 1em;
+	}
 }

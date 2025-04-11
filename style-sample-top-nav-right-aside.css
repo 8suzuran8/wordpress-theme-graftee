@@ -331,15 +331,8 @@ body > main h6 {
 	}
 
 	body > nav {
-		right: 1em;
-		position: absolute;
-		top: 12.5em;
-		width: 17em;
-	}
-
-	body > nav:has(+ol) {
-		/* use BreadcrumbList */
-		top: 16.1em;
+		margin-left: 1em;
+		margin-top: 1em;
 	}
 
 	body > nav > h2 {
@@ -347,12 +340,12 @@ body > main h6 {
 	}
 
 	body > nav li {
-		display: block;
+		display: inline-block;
 		padding: 0 1em;
 	}
 
 	body > nav li:not(:last-child) {
-		border-bottom: solid 1px #000;
+		border-right: solid 1px #000;
 	}
 
 	body > ol {
@@ -362,23 +355,22 @@ body > main h6 {
 
 	body > main {
 		margin-left: 1em;
-		margin-right: 19em;
 	}
 
 	body.use-widget > main {
-		margin-left: 19em;
+		margin-right: 19em;
 	}
 
 	body > aside {
 		position: absolute;
-		left: 1em;
-		top: 12.5em;
+		right: 1em;
+		top: 16.1em;
 		width: 17em;
 	}
 
 	body > ol + main + aside {
 		/* use BreadcrumbList */
-		top: 16.14em;
+		top: 19.75em;
 	}
 
 	body > aside h2 {
