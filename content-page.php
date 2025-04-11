@@ -19,15 +19,17 @@
 <?php graftee_post_nav(); ?>
 
 <?php if ( ( comments_open() || get_comments_number() ) ) : ?>
-	<script>
-		<?php
-			// If comments are open or we have at least one comment, load up the comment template
-			$iframe = '<iframe class="foriframe" src="' . graftee_get_comments_url() . '" scrolling="no"></iframe>';
-			echo 'document.write(\'' . $iframe . '\')';
-		?>
-	</script>
-	<noscript>
-		<a href="<?php echo graftee_get_comments_url(); ?>"><?php echo graftee_get_public_word( 'comment' ); ?></a>
-	</noscript>
+	<?php
+		comment_form();
+		if ( have_comments() ) :
+	?>
+	<p><?php comments_number(); ?></p>
+	<ol class="commentlist">
+		<?php wp_list_comments(); ?>
+	</ol>
+	<?php
+		paginate_comments_links();
+		endif;
+	?>
 <?php endif; ?>
 <?php endif; ?>

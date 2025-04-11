@@ -86,6 +86,11 @@ if ( ! function_exists( 'graftee_setup' ) ) {
 		add_theme_support( 'title-tag' );
 
 		// add_theme_support( 'custom-logo' );
+
+		add_theme_support( "wp-block-styles" );
+		add_theme_support( "responsive-embeds" );
+		add_theme_support( "align-wide" );
+		add_theme_support( "custom-logo" );
 	}
 } // end of graftee_setup
 add_action( 'after_setup_theme', 'graftee_setup' );
@@ -115,6 +120,25 @@ function graftee_widgets_init() {
 		'before_title'	=> '',
 		'after_title'	=> '',
 	) );
+	register_block_style(
+		'core/button',
+		array(
+			'name' => 'ghub-button1',
+			'label' => 'ghub style 1',
+		)
+	);
+	if ( function_exists( 'register_block_pattern_category' ) ) {
+		function my_plugin_register_pattern_category() {
+			register_block_pattern_category( 
+				'my-pattern-category', 
+				array(
+					'label' => 'My Pattern Category', 'my-plugin-text-domain',
+					'description' => 'Simple call to action with a header, an image, a paragraph, and a button.',
+				)
+			);
+		}
+		add_action( 'init', 'my_plugin_register_pattern_category' );
+	}
 }
 
 add_action( 'widgets_init', 'graftee_widgets_init' );
@@ -247,21 +271,21 @@ function graftee_advanced_settings_text_validate( $text ) {
 
 function graftee_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'graftee_site_title_img', array(
-		'transport'	    => 'refresh',
+		'transport'		=> 'refresh',
 		'sanitize_callback' => 'graftee_advanced_settings_text_validate',
 		'placeholder' => 'URL',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'graftee_site_title_img', array(
 		'label'	   => __( 'サイトのタイトル画像URL', 'graftee' ),
-		'type'     => 'text',
+		'type'	   => 'text',
 		'section'  => 'title_tagline',
 		'settings' => 'graftee_site_title_img',
 		'default'  => '',
 	) ) );
 
 	$wp_customize->add_setting( 'background_color' , array(
-		'default'           => null,
+		'default'			=> null,
 		'sanitize_callback' => 'sanitize_hex_color'
 	) );
 
@@ -311,7 +335,7 @@ function graftee_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_breadcrumbs', array(
-		'transport'	    => 'postMessage',
+		'transport'		=> 'postMessage',
 		'sanitize_callback' => 'graftee_advanced_settings_checkbox_validate',
 	) );
 
@@ -323,7 +347,7 @@ function graftee_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_font_size', array(
-		'transport'	    => 'refresh',
+		'transport'		=> 'refresh',
 		'sanitize_callback' => 'graftee_advanced_settings_checkbox_validate',
 	) );
 
@@ -335,7 +359,7 @@ function graftee_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_disabled_use_title', array(
-		'transport'	    => 'refresh',
+		'transport'		=> 'refresh',
 		'sanitize_callback' => 'graftee_advanced_settings_checkbox_validate',
 	) );
 
@@ -347,7 +371,7 @@ function graftee_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_disabled_stylecss', array(
-		'transport'	    => 'postMessage',
+		'transport'		=> 'postMessage',
 		'sanitize_callback' => 'graftee_advanced_settings_checkbox_validate',
 	) );
 
@@ -360,28 +384,28 @@ function graftee_customize_register( $wp_customize ) {
 	) ) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_add_css', array(
-		'transport'	    => 'postMessage',
+		'transport'		=> 'postMessage',
 		'sanitize_callback' => 'graftee_advanced_settings_text_validate',
 		'placeholder' => 'URL',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'graftee_advanced_settings_add_css', array(
 		'label'	   => __( 'CSSファイルを追加する', 'graftee' ),
-		'type'     => 'text',
+		'type'	   => 'text',
 		'section'  => 'graftee_advanced_settings',
 		'settings' => 'graftee_advanced_settings_add_css',
 		'default'  => '',
 	) ) );
 
 	$wp_customize->add_setting( 'graftee_advanced_settings_credit', array(
-		'transport'	    => 'postMessage',
+		'transport'		=> 'postMessage',
 		'sanitize_callback' => 'graftee_advanced_settings_text_validate',
 		'placeholder' => 'URL',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'graftee_advanced_settings_credit', array(
 		'label'	   => __( 'footerのクレジット表示', 'graftee' ),
-		'type'     => 'text',
+		'type'	   => 'text',
 		'section'  => 'graftee_advanced_settings',
 		'settings' => 'graftee_advanced_settings_credit',
 		'default'  => '',
@@ -418,7 +442,7 @@ function graftee_customize_register( $wp_customize ) {
 
 	foreach ($word_keys as $value) {
 		$wp_customize->add_setting( 'graftee_advanced_settings_' . $value, array(
-			'transport'	    => 'postMessage',
+			'transport'		=> 'postMessage',
 			'sanitize_callback' => 'graftee_advanced_settings_word_validate',
 		) );
 
@@ -605,7 +629,7 @@ function graftee_get_multiple_header_images_animation_type1( $reverse = false ) 
 		$animations[ $i ] .= $size;
 		$animations[ $i ] .= '}' . "\n";
 
-		$animations[ $i ] .= ( 100 / $uploaded_header_image_count * ( $i + 0.7 ) ) . '%  {';
+		$animations[ $i ] .= ( 100 / $uploaded_header_image_count * ( $i + 0.7 ) ) . '%	 {';
 		$animations[ $i ] .= 'background-position: ';
 		$animations[ $i ] .= $position;
 		$animations[ $i ] .= 'background-size: ';
@@ -622,7 +646,7 @@ function graftee_get_multiple_header_images_animation_type1( $reverse = false ) 
 
 	$i ++;
 	$animations[ $i ] = '';
-	$animations[ $i ] .= '100%  {';
+	$animations[ $i ] .= '100%	{';
 	$animations[ $i ] .= 'background-position: ';
 	$animations[ $i ] .= $position_100per;
 	$animations[ $i ] .= 'background-size: ';
@@ -759,7 +783,7 @@ function graftee_get_multiple_header_images_animation_type2( $reverse = false ) 
 		$animations[ $i ] .= $size;
 		$animations[ $i ] .= '}' . "\n";
 
-		$animations[ $i ] .= ( 100 / $uploaded_header_image_count * ( $i + 0.7 ) ) . '%  {';
+		$animations[ $i ] .= ( 100 / $uploaded_header_image_count * ( $i + 0.7 ) ) . '%	 {';
 		$animations[ $i ] .= 'background-position: ';
 		$animations[ $i ] .= $position;
 		$animations[ $i ] .= 'background-size: ';
@@ -776,7 +800,7 @@ function graftee_get_multiple_header_images_animation_type2( $reverse = false ) 
 
 	$i ++;
 	$animations[ $i ] = '';
-	$animations[ $i ] .= '100%  {';
+	$animations[ $i ] .= '100%	{';
 	$animations[ $i ] .= 'background-position: ';
 	$animations[ $i ] .= $position_100per;
 	$animations[ $i ] .= 'background-size: ';
@@ -993,7 +1017,7 @@ if ( is_admin() ) {
 } else {
 	if ( ! function_exists( 'wp_get_document_title' ) ) {
 		function wp_get_document_title() {
-			return wp_title( '|', false, 'right' );
+			return add_theme_support('title-tag');
 		}
 	}
 
@@ -1045,14 +1069,14 @@ if ( is_admin() ) {
 			if ( empty( $paged ) ) $paged = 1;
 
 			echo paginate_links( array(
-				'base'	    => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-				'format'    => '?paged=%#%',
-				'current'   => max( 1, get_query_var( 'paged' ) ),
-				'total'	    => $wp_query -> max_num_pages,
-				'mid_size'  => 3,
+				'base'		=> str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+				'format'	=> '?paged=%#%',
+				'current'	=> max( 1, get_query_var( 'paged' ) ),
+				'total'		=> $wp_query -> max_num_pages,
+				'mid_size'	=> 3,
 				'prev_text' => __( '前へ', 'graftee' ),
 				'next_text' => __( '次へ', 'graftee' ),
-				'type'	    => 'list'
+				'type'		=> 'list'
 			) );
 		}
 	}
@@ -1497,12 +1521,26 @@ if ( is_admin() ) {
 		add_filter( 'style_loader_tag', 'graftee_style_loader_tag' );
 	}
 
+	function graftee_wp_head_script() {
+		echo '<script async src="' . get_stylesheet_directory_uri() . '/js.php"></script>';
+	}
+	add_action( 'wp_head', 'graftee_wp_head_script', 10 );
+
 	$add_css = get_theme_mod( 'graftee_advanced_settings_add_css', null );
 	if ( ! is_null( $add_css ) && $add_css != '' ) {
-		function graftee_wp_head() {
+		function graftee_wp_head_css() {
 			echo '<link rel="stylesheet" id="graftee-add-css" href="' . get_theme_mod( 'graftee_advanced_settings_add_css' ) . '">';
 		}
 
-		add_action( 'wp_head', 'graftee_wp_head', 10 );
+		add_action( 'wp_head', 'graftee_wp_head_css', 10 );
+	}
+
+	$graftee_advanced_settings_font_size = get_theme_mod( 'graftee_advanced_settings_font_size', null );
+	if ( !is_null( $graftee_advanced_settings_font_size ) && $graftee_advanced_settings_font_size === true ) {
+		function graftee_advanced_settings_font_size_script() {
+			echo "<script>var current_font_size = document.getElementById( 'change-font-size-button-' + localStorage.getItem( 'graftee-font-size' ) ); if ( current_font_size !== null ) current_font_size.checked = true;</script>";
+		}
+
+		add_action( 'wp_body_open', 'graftee_advanced_settings_font_size_script', 1);
 	}
 }

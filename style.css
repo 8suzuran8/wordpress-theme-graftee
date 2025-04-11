@@ -4,12 +4,13 @@ Theme URI: https://graftee.wordpress.com/
 Author: suzuran
 Author URI: https://profiles.wordpress.org/8suzuran8/
 Description: graftee is a simple WordPress theme for the blog. Use the Responsive layout of CSS media queries, and automatically respond to smartphones, and support accessibility AAA. graftee is a theme for child theme. graftee have many original hook method, and auto load child theme files. File is graftee.js, news.php, customizer.php and customizer.js in child theme directory. graftee is perfect markup, so if you can use the CSS, you can easily develop the theme. You can make a lot of design just make the style.css and images. You can use the starter CSS. It is a style-sample-left-nav.css and style-sample-right-nav.css and style-sample-top-nav.css. These are only the CSS different position of global menu. After that, you just change the color, size, background image, border. It is easy! graftee is a theme for develop child theme!
-Tested up to: 6.2                                                                                                                      
+Tested up to: 6.2
+Requires PHP: 5.6
 Version: 1.1.38
 License: GNU General Public License v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.ja.html
 Text Domain: graftee
-Tags: black, gray, white, fluid-layout, responsive-layout, one-column, two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, blavatar, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
 */
 
 .sticky ,

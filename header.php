@@ -15,19 +15,17 @@
 <base target="_parent">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<script async src="<?php echo get_stylesheet_directory_uri(); ?>/js.php"></script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
 	<?php $graftee_advanced_settings_font_size = get_theme_mod( 'graftee_advanced_settings_font_size', null ); ?>
 	<?php if ( !is_null( $graftee_advanced_settings_font_size ) && $graftee_advanced_settings_font_size === true ): ?>
 		<input type="radio" name="change-font-size-button" value="05" id="change-font-size-button-05" hidden>
 		<input type="radio" name="change-font-size-button" value="1" id="change-font-size-button-1" hidden checked>
 		<input type="radio" name="change-font-size-button" value="2" id="change-font-size-button-2" hidden>
-		<script>var current_font_size = document.getElementById( 'change-font-size-button-' + localStorage.getItem( 'graftee-font-size' ) ); if ( current_font_size !== null ) current_font_size.checked = true;</script>
 	<?php endif; ?>
+	<?php wp_body_open(); ?>
 
 	<header role="banner" itemscope itemtype="http://schema.org/WPHeader">
 		<?php $graftee_advanced_settings_disabled_use_title = get_theme_mod( 'graftee_advanced_settings_disabled_use_title', null ); ?>
